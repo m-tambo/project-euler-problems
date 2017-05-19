@@ -5,11 +5,11 @@
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
 const multiSum = (x, y, top) => {
-  let sum = 0, i = 0;
+  let sum = 0;
   for (let i = 0; i < top; i++) {
     i%x === 0 || i%y === 0 ? sum += i : sum
-  }
-  return sum
+  };
+  return sum;
 };
 
 // test
