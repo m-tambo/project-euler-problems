@@ -7,7 +7,7 @@
 const multiSum = (x, y, top) => {
   let sum = 0, i = 0;
   for (let i = 0; i < top; i++) {
-    i%x === 0 ? sum += i : i%y === 0 ? sum += i : sum
+    i%x === 0 || i%y === 0 ? sum += i : sum
   }
   return sum
 };
