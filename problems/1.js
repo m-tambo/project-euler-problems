@@ -8,12 +8,6 @@ const multiSum = (x, y, top) => {
   let sum = 0, i = 0;
   for (let i = 0; i < top; i++) {
     i%x === 0 ? sum += i : i%y === 0 ? sum += i : sum
-    // if (i%x === 0) {
-    //   sum += i
-    // } else
-    // if (i%y === 0) {
-    //   sum += i
-    // }
   }
   return sum
 };
