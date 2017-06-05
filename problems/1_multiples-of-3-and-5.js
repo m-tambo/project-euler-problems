@@ -4,17 +4,17 @@
 // The sum of these multiples is 23.
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
-const multiSum = (x, y, top) => {
+const sumOfMutiplesOfXorY = (x, y, upperLimit) => {
   let sum = 0;
-  for (let i = 0; i < top; i++) {
+  for (let i = 0; i < upperLimit; i++) {
     i%x === 0 || i%y === 0 ? sum += i : sum
   };
   return sum;
 };
 
 // test
-console.log("23 should equal:", multiSum(3, 5, 10))
+console.log("23 should equal:", sumOfMutiplesOfXorY(3, 5, 10))
 
 // solution
-console.log("solution:", multiSum(3, 5, 1000))
+console.log("solution:", sumOfMutiplesOfXorY(3, 5, 1000))
 // 233168
