@@ -8,18 +8,26 @@ const isNumberAFactor = (dividend, divisor) => {
 }
 
 const isNumberPrime = (number) => {
-
+  for (let i = 2; i < number; i++) {
+    if (number%i === 0) return false
+  }
+  return true
 }
 
 const findGreatestPrimeFactor = (number) => {
-  while (!greatestPrimeFactor) {
-
+  for (let i = number; i > 1; i--) {
+    if (isNumberAFactor(number, i) && isNumberPrime(i)) return i
   }
-  return greatestPrimeFactor
 }
 
 // tests
 console.log(`${isNumberAFactor(10, 5)} should be true`)
 console.log(`${isNumberAFactor(10, 3)} should be false`)
-console.log(`${isNumberPrime(11)} should be true`)
+console.log(`${isNumberPrime(13)} should be true`)
 console.log(`${isNumberPrime(10)} should be false`)
+console.log(`${findGreatestPrimeFactor(13195)} should be 29`)
+console.log(`${findGreatestPrimeFactor(137)} should be 137`)
+
+// solution
+console.log(`solution: ${findGreatestPrimeFactor(600851475143)}`)
+//
